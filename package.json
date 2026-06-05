@@ -1,0 +1,30 @@
+{
+  "name": "@freeagentstore/mood-palette",
+  "version": "1.0.0",
+  "description": "Upload a photo or describe a mood — get a color palette with names. Extract colors from images or generate from text. Pure JS + Chrome Built-in AI.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["freeagentstore", "ai", "browser", "heuristic"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreeAgentStore/mood-palette.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  }
+}
